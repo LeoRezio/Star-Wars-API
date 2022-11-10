@@ -20,6 +20,7 @@ export class PersonComponent implements OnInit {
   //Busca as informações do Serviço do component, enviando as informações de parametros
   getData() {
     this.personService.getPeople(this.search, this.page).subscribe((data) => {
+      console.log(data);
       this.count = data.count;
       this.people = data.results;
     });
